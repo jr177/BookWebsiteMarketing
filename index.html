@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Joanne Rodrigues | Books on Data Science</title>
-<meta name="description" content="Books on applied data science and demography: Product Analytics (Addison-Wesley) and Demographic Techniques for Data Scientists (Springer Nature).">
+<title>Joanne Rodrigues | Author &amp; Data Scientist</title>
+<meta name="description" content="Joanne Rodrigues is a data scientist and the author of Product Analytics (Addison-Wesley) and Demographic Techniques for Data Scientists (Springer Nature).">
 
 <!-- Open Graph / social previews. Replace the URL and image once your site is live. -->
 <meta property="og:type" content="website">
-<meta property="og:title" content="Joanne Rodrigues | Books on Data Science">
-<meta property="og:description" content="Product Analytics and Demographic Techniques for Data Scientists.">
+<meta property="og:title" content="Joanne Rodrigues | Author &amp; Data Scientist">
+<meta property="og:description" content="Books on why people do what they do, and how to measure, forecast, and change it: Product Analytics and Demographic Techniques for Data Scientists.">
 <meta property="og:url" content="https://YOUR-USERNAME.github.io/">
 <meta property="og:image" content="https://YOUR-USERNAME.github.io/images/og-card.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -151,6 +151,20 @@
   .topics { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 28px; padding: 0; list-style: none; }
   .topics li { font: 500 13px var(--mono); padding: 6px 12px; border: 1px solid var(--line); border-radius: 8px; color: var(--muted); }
 
+  /* Chapter list */
+  details.chapters { margin: 0 0 28px; border: 1px solid var(--line); border-radius: 12px; background: var(--bg); }
+  details.chapters summary {
+    cursor: pointer; padding: 14px 18px; font: 600 15px var(--sans); list-style: none;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  details.chapters summary::-webkit-details-marker { display: none; }
+  details.chapters summary::after { content: "+"; font: 500 20px var(--mono); color: var(--warm); }
+  details.chapters[open] summary::after { content: "\2212"; }
+  details.chapters ol { margin: 0; padding: 4px 18px 18px 18px; list-style: none; display: grid; gap: 14px; counter-reset: ch; }
+  details.chapters li { counter-increment: ch; padding-left: 38px; position: relative; font-size: 15.5px; line-height: 1.55; color: var(--muted); }
+  details.chapters li::before { content: counter(ch); position: absolute; left: 0; top: 0; font: 500 13px var(--mono); color: var(--warm); width: 26px; }
+  details.chapters li strong { display: block; color: var(--ink); font-weight: 600; font-size: 16px; }
+
   /* About */
   .about { display: grid; grid-template-columns: 220px 1fr; gap: 48px; align-items: start; }
   @media (max-width: 720px) { .about { grid-template-columns: 1fr; } }
@@ -213,11 +227,11 @@
   <!-- HERO -->
   <div class="hero">
     <div class="wrap">
-      <p class="eyebrow">Data science &times; social science</p>
+      <p class="eyebrow">Data science &times; demography &times; social science</p>
       <h1>Turn data into <em>decisions</em> about people.</h1>
       <p class="lede">
-        Two books on the techniques that explain why people behave the way they do, and how to
-        measure, forecast, and change it, from product analytics to population-scale demography.
+        I write about the techniques that explain why people behave the way they do, and how to
+        measure, forecast, and change it. Two books, from product analytics to population-scale demography.
       </p>
       <div class="btn-row">
         <a class="btn primary" href="#books">Explore the books</a>
@@ -231,7 +245,7 @@
     <div class="wrap">
       <div class="section-head">
         <h2>The books</h2>
-        <p class="sub">Practical, example-driven guides for analysts, data scientists, and product teams.</p>
+        <p class="sub">Practical guides for data scientists, product teams, and decision-makers who work with data about people.</p>
       </div>
 
       <!-- Book 1 -->
@@ -253,18 +267,24 @@
           <p class="tagline">Applied Data Science Techniques for Actionable Consumer Insights</p>
           <p class="meta">Addison-Wesley Data &amp; Analytics Series &middot; 2020</p>
           <p>
-            Predictive models tell you what will happen. This book is about <em>why</em> it happens, and
-            what you can do about it. It combines statistics with social science to help you build
-            sharper theories, better metrics, and experiments that lead to real behavior change,
-            with hands-on examples in R.
+            <em>Product Analytics</em> is a complete, hands-on guide to generating actionable business insights from
+            customer data. It introduces practical statistical techniques for determining <em>why</em> things happen
+            and how to change what people do at scale, paired with social science methods for building better theories
+            and metrics and driving faster, more sustained behavior change.
+          </p>
+          <p>
+            Written for entrepreneurs, product managers, marketers, and other business practitioners, it teaches through
+            intuitive examples from both web and offline environments. Light on math, it walks you step by step through
+            choosing the right technique for each application, running the analysis in R, and getting answers you can trust.
           </p>
           <ul class="learn">
-            <li>Build testable theories of user behavior and design KPIs that actually mean something</li>
-            <li>Run more informative A/B tests, and go beyond them with causal inference methods such as difference-in-differences, regression discontinuity, propensity scores, and uplift modeling</li>
-            <li>Forecast user populations and business needs with demographic projection techniques</li>
+            <li>Develop testable theories of individual and social behavior in web products</li>
+            <li>Build better metrics and KPIs for any product or system</li>
+            <li>Run more informative A/B tests, then go beyond them with difference-in-differences, regression discontinuity, propensity score matching, and uplift modeling</li>
+            <li>Project user populations and business needs with demographic techniques</li>
           </ul>
           <ul class="topics" aria-label="Topics">
-            <li>A/B testing</li><li>Causal inference</li><li>Metrics &amp; KPIs</li><li>Clustering</li><li>Uplift modeling</li><li>R</li>
+            <li>A/B testing</li><li>Causal inference</li><li>Metrics &amp; KPIs</li><li>Behavior change</li><li>Uplift modeling</li><li>R</li>
           </ul>
           <div class="btn-row">
             <a class="btn primary" href="https://www.amazon.com/dp/0135258529" target="_blank" rel="noopener">Buy on Amazon</a>
@@ -287,20 +307,42 @@
         <div>
           <span class="badge soon">Coming December 2026</span>
           <h3>Demographic Techniques for Data Scientists</h3>
-          <p class="tagline">The tools of population science, brought into the modern data science workflow.</p>
+          <p class="tagline">Population thinking for metrics, models, and fairness in machine learning.</p>
           <p class="meta">Springer Nature &middot; Forthcoming, December 2026</p>
-          <!-- EDIT: replace this description and the bullets with your final book copy. -->
           <p>
-            Demographic Techniques for Data Scientists brings over 500 years of demographic insight into modern data science practice. For centuries, demographers have rigorously studied how populations evolve over time, developing sophisticated approaches to measurement, forecasting, and the statistical examination of population. These tools, deeply grounded in the interaction between population and time, offer powerful, underutilized perspectives for today’s data scientists.
+            <em>Demographic Techniques for Data Scientists</em> brings over 500 years of demographic insight into modern data science
+            practice. For centuries, demographers have rigorously studied how populations evolve over time, developing sophisticated
+            approaches to measurement, forecasting, and the statistical examination of population. These tools, deeply grounded in the
+            interaction between population and time, offer powerful, underutilized perspectives for today&rsquo;s data scientists.
+          </p>
+          <p>
+            The book starts with the foundations of robust metrics, then applies them to one of the field&rsquo;s most pressing problems:
+            finding and addressing bias and discrimination in machine learning. It culminates in the SHIFT Framework, a step-by-step
+            methodology grounded in the patterns of behavioral data, with code in Python and R.
           </p>
           <ul class="learn">
-            <li>Learn the foundational measures and models used to study population change</li>
-            <li>Apply demographic methods to real-world data science problems</li>
-            <li>Build forecasts and projections you can defend</li>
+            <li>Build robust, consistent metrics across period, age, and cohort, with principled exposures and denominators</li>
+            <li>Reinterpret everyday data science metrics, like precision and recall, through population and time</li>
+            <li>Evaluate bias in machine learning with subgroup analysis, causal inference, and algorithmic impact assessments</li>
+            <li>Integrate census and survey data with behavioral datasets to measure who your models really serve</li>
           </ul>
           <ul class="topics" aria-label="Topics">
-            <li>Demography</li><li>Population projection</li><li>Life tables</li><li>Forecasting</li>
+            <li>Demography</li><li>Metrics</li><li>Census &amp; survey data</li><li>Algorithmic bias</li><li>Causal inference</li><li>Python</li><li>R</li>
           </ul>
+          <details class="chapters">
+            <summary>Inside the book: chapter overview</summary>
+            <ol>
+              <li><strong>Developing Robust and Consistent Metrics</strong>The foundational concepts of period, age, and cohort, and how to build simple metrics across them. Essential for understanding the interplay of time and population in metrics and models.</li>
+              <li><strong>The Craft of Complex Metric Construction</strong>Period-based metrics, exposure variables, and principled denominators and rates, plus path dependence and funnel metrics for population flows. Implemented in Python and R.</li>
+              <li><strong>Demographic Techniques for Data Science Metrics</strong>Applying population and time to common data science metrics such as precision and recall, with theory and code.</li>
+              <li><strong>Metrics to Assess Discrimination</strong>Evaluating bias in machine learning through population representativeness: subgroup analysis, causal inference with observational data, and structured evaluation across demographic groups.</li>
+              <li><strong>The World of Census Data</strong>The history, methodology, and global context of census and survey data, including the United States, Canada, India, and Brazil.</li>
+              <li><strong>Census and Survey Data Integration</strong>Building metrics from U.S. American Community Survey and international census data, and integrating them with behavioral datasets. Python and R examples.</li>
+              <li><strong>Mapping Conceptual and Demographic Variables in Models</strong>Turning preferences, heuristics, and decision-making patterns into measurable variables, the limits of conventional ML approaches to bias, and a framework for human heuristics of bias and discrimination.</li>
+              <li><strong>Algorithmic Impact Assessments and Benchmarking</strong>Evaluating model performance in real-world contexts, including bias, coverage, and representativeness, with frameworks for external benchmarking.</li>
+              <li><strong>The SHIFT Framework</strong>A step-by-step methodology for addressing discrimination in machine learning, built on the underlying patterns of behavioral data, with applied case studies.</li>
+            </ol>
+          </details>
           <div class="btn-row">
             <a class="btn primary" href="#updates">Notify me at launch</a>
             <!-- When the book is listed, add: <a class="btn ghost" href="SPRINGER-URL">Springer page</a> -->
@@ -318,20 +360,31 @@
              <img src="images/author.jpg" alt="Joanne Rodrigues" style="width:220px;border-radius:50%;aspect-ratio:1;object-fit:cover">
         <div>
           <h2>About the author</h2>
-          <!-- EDIT: replace with your own bio. -->
           <p>
-            Joanne Rodrigues is a data scientist with a background spanning mathematics, political
-            science, and demography. Her work focuses on bringing social science thinking into
-            data science practice.
+            Joanne Rodrigues is a data scientist, author, entrepreneur, and public policy leader specializing in
+            artificial intelligence, demographics, and equitable technology. She is the author of
+            <em>Product Analytics</em> (Addison-Wesley) and <em>Demographic Techniques for Data Scientists</em>
+            (Springer Nature), and is currently building tools to integrate demographic techniques into data science workflows.
           </p>
           <p>
-            She is the author of <em>Product Analytics</em> (Addison-Wesley) and the forthcoming
-            <em>Demographic Techniques for Data Scientists</em> (Springer Nature).
+            Joanne is the founder of Clinic Price Check, a healthcare transparency company named a TechCrunch Battlefield SF 2020
+            finalist. She has more than a decade of experience applying data science, machine learning, and causal inference
+            to complex problems across technology, healthcare, and government, including leadership roles at MeYou Health,
+            Machine Zone, and Sony PlayStation, where she managed analytics teams and developed data-driven products.
+          </p>
+          <p>
+            She currently leads data and technology initiatives for Cal/OSHA, applying advanced analytics and machine learning to
+            evidence-based occupational safety policy. Her projects include statewide predictive modeling to prevent
+            occupational heat-related fatalities and Valley Fever deaths, risks that disproportionately affect low-income Hispanic and
+            Black workers across California.
+          </p>
+          <p>
+            Joanne holds master&rsquo;s degrees in Political Science and Demography from UC Berkeley, an M.Sc. in Applicable
+            Mathematics from the London School of Economics, and a B.S.F.S. in International Political Economy from Georgetown University.
           </p>
           <div class="btn-row">
-            <!-- EDIT: add your real links -->
-            <a class="btn ghost" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-            <a class="btn ghost" href="mailto:you@example.com">Email</a>
+                        <a class="btn ghost" href="https://www.linkedin.com/in/joanne-c-rodrigues/" target="_blank" rel="noopener">LinkedIn</a>
+            <a class="btn ghost" href="mailto:joannecrodrigues@gmail.com">Email</a>
           </div>
         </div>
       </div>
@@ -343,29 +396,34 @@
     <div class="wrap">
       <div class="section-head">
         <h2>Speaking &amp; workshops</h2>
-        <p class="sub">Available for conferences, company talks, university lectures, podcasts, and team workshops.</p>
+        <p class="sub">Keynotes, workshops, and talks for conferences, companies, universities, and podcasts.</p>
       </div>
       <!-- EDIT: replace these sample topics with your actual talks. -->
       <div class="talks">
         <div class="talk">
           <p class="fmt">Keynote &middot; 45 min</p>
           <h3>Why Do Users Do What They Do?</h3>
-          <p>Combining social science with data science to build theories of behavior that lead to better product decisions.</p>
+          <p>How combining social science with data science produces better theories of behavior, better metrics, and product decisions that actually change what people do.</p>
         </div>
         <div class="talk">
           <p class="fmt">Workshop &middot; Half day</p>
           <h3>Beyond A/B Testing</h3>
-          <p>A practical tour of causal inference methods for when experiments are impossible, expensive, or not enough.</p>
+          <p>A hands-on tour of causal inference for when experiments are impossible, expensive, or not enough: difference-in-differences, regression discontinuity, propensity scores, and uplift modeling.</p>
         </div>
         <div class="talk">
           <p class="fmt">Talk &middot; 30 min</p>
           <h3>Demography for Data Scientists</h3>
-          <p>How population methods improve forecasting, metrics, and planning for any organization that serves people.</p>
+          <p>What 500 years of population science can teach modern data teams about metrics, time, and measurement for any organization that serves people.</p>
+        </div>
+        <div class="talk">
+          <p class="fmt">Talk &middot; 45 min</p>
+          <h3>Measuring Bias in Machine Learning</h3>
+          <p>Why conventional bias-removal methods fall short, and how demographic thinking helps you evaluate representativeness, impact, and discrimination in real systems.</p>
         </div>
       </div>
       <div class="speak-cta">
-        <!-- EDIT: set your real booking email -->
-        <a class="btn primary" href="mailto:you@example.com?subject=Speaking%20inquiry">Invite me to speak</a>
+        <a class="btn primary" href="https://cal.com/erinjerri/45min" target="_blank" rel="noopener">Schedule me to speak</a>
+        <a class="btn ghost" href="mailto:joannecrodrigues@gmail.com?subject=Speaking%20inquiry">Email an inquiry</a>
         <span>Include the event, date, audience size, and format.</span>
       </div>
     </div>
@@ -375,8 +433,8 @@
   <section id="updates">
     <div class="wrap">
       <div class="signup">
-        <h2>Get launch updates</h2>
-        <p>Be the first to know when <em>Demographic Techniques for Data Scientists</em> is available, plus occasional notes on new material.</p>
+        <h2>Be first to hear about the new book</h2>
+        <p>Get a note when <em>Demographic Techniques for Data Scientists</em> is released, plus occasional updates on new writing, talks, and tools for bringing demography into data science.</p>
         <!-- EDIT: replace the action URL with your provider's form endpoint
              (Buttondown, MailerLite, Formspree, Web3Forms, etc.). -->
         <form action="https://example.com/subscribe" method="post">
